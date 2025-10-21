@@ -1,0 +1,79 @@
+07.07
+1. 확장프로그램 설치 > Live Server : 자동 새로고침
+- 무조건 폴더가 연결되어있어야 열림
+2. !+Enter = 코드 자동생성
+3. viewport = 화면 가운데 정렬
+4. lang=ko(한국어)로 설정하기 필수
+5. <img src="(이미지명(주소)"  alt="이미지 설명" /> : 이미지 불러오기 
+ - ex) <img src="img/코딩 사진1.jpg"  alt="이미지 설명" /> 
+6. (확장프로그램)Korean Language Pack for Visure~~설치 : 언어 한국어로 변경
+7. <.> = class
+	div.border -> <div class="border">
+
+ text-align: center; : 텍스트 가운데 정렬(가로)
+line-height: (높이)300px; : 텍스트 가운데 정렬(세로)
+alt+shift+a = 주석
+border-radius : 둥근 모서리 만들기
+
+
+07.08 - 테두리 속성(p.237)
+<border-width> :테두리 두께 설정
+<border-color> :테두리 색상 설정
+	border-color: #000000;
+	border-color: rgb(255, 255, 0);
+	border-color: rgba(255, 255, 0); ->(투명도 적용)
+<border-style> : 테두리 스타일 적용
+	border-style: none; -> 테두리 제거
+		      hidden -> 테두리 감추기
+		      double -> 테두리 이중선 지정
+		      groove -> 테두리 오목한 선으로 지정(홈이 파인 듯 입체적)
+		      dotted -> 테두리 점선 지정
+		      ridge -> 테두리 볼록한 선으로 지정(튀어나온 듯 입체적)
+		      dashed -> 테두리를 파선(긴 점선)으로 지정
+		      solid -> 테두리를 실선으로 지정
+		      inset -> 테두리 안쪽이 오목한 선으로 지정
+		      outset -> 테두리 안쪽이 볼록한 선으로 지정
+<inherit> : 부모값 없애기
+	color: inherit; -> 컬러값 초기화
+<border-(top/bottom/left/right> : 테두리 한쪽 적용
+
+
+
+07/10 필기
+
+1. (코드 드래그 한 상태)Alt+Shift+아랫방향키 = 코드 복사 
+2. flex-wrap: wrap; = 옆으로 나열된 것 밑으로 떨구기
+3. justify-content:space-between = 오브젝트들 사이 동일한 간격
+    ( 얘는  display: flex; 있어야 적용 가능 )
+
+
+
+07/17 필기
+1. align-items: center; = 요소들 수직 중앙 정렬( 얘는  display: flex; 있어야 적용 가능 )
+
+07/18 필기(텍스트 배경 이미지 적용)
+1. 이미지 적용 > background-image: url('img/강가.jpg');
+
+2. 적용한 이미지 사이즈 설정 >  background-size: 200px; 
+	  /* cover(최다사용,비율에 맞춰서 가득 채워짐, 이미지 일부 짤림 가능), contain(가로세로 비율 유지하면서 가득채움) */
+
+3. 이미지 반복 설정 >  background-repeat:repeat; 
+	 /*repeat(기본값),no repeat(없애기),방향설정> repeat-x(x축 기준 이미지 반복), repeat-y(y축 기준 이미지 반복) */
+
+4. 이미지 위치 변경 >  background-position:20px 100px ;/* 첫번째 값 가로, 두번째 세로값 + %로 설정 가능(50%= 중앙정렬)+명령어로 정렬 가능(center center = 중앙)*/
+	x축 > left, center, right  /  y축> top, center, bottom    
+
+5. 효과 한번에 적용하는 방법 >  background: url('img/해변\ 파도.jpg') center center / cover no-repeat;
+		(선 위치 / 후 사이즈 순서 바뀌면 ㄴㄴ) */  /* 배경:이미지 경오 x축 위치 y축 위치 / 사이즈 이미지 반복 */       
+
+6. 배경 이미지 고정 > background-attachment: fixed;
+	/* 배경 이미지 고정시킴+ 속성값만 background:;안에 넣어 설정 가능(마지막 순서) */
+
+7. 그라데이션 배경 삽입 > '그라디언트 IO' 사이트 가서 코드 복붙
+
+8. 블러효과 .  backdrop-filter: blur(5px);
+
+9. 외부 스타일 파일 만들기
+	- html 파일 > head > title 아래에 link 입력>( <link rel="stylesheet" href="css/14.css">) 이런 문구가 뜸
+	- href ""안에 css/파일명 입력
+	- ctrl + 링크 클릭 > 파일 만들기 

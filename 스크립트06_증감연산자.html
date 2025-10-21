@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_증산연산자</title>
+    <link rel="stylesheet" href="css/스크립트06.css">
+
+    <script>
+        window.onload = () => {
+            let num = document.getElementsByClassName('num')[0];
+            let downBtn = document.getElementsByClassName('down')[0];
+            let upBtn = document.getElementsByClassName('up')[0];
+
+            let i = 0;/* 초기값(시작하고자 하는 값) */
+
+            //증가연산자(1씩 증가) : 변수++;
+            //감소연산자(1씩 감소) : 변수--;
+            upBtn.addEventListener('click', () => {
+                /* alert() */
+                i++;
+                //console.log(i++) /* 검사창-콘솔로 미리 확인 */
+                num.innerHTML = i;
+            });
+
+            downBtn.addEventListener('click', () => {
+                i--;
+                /* i값보다 0이 더 크면 i값은 0으로 설정 */
+                if(i < 0) {
+                    i = 0;
+                }/* =을 뺴면 0이하(음수)로 내려가지 않음 */
+                num.innerHTML = i;
+            })
+        };/* script end */
+    </script>
+</head>
+
+<body>
+    <div class="btn_wrap">
+        <button class="down">➖</button>
+        <span class="num">0</span>
+        <button class="up">➕</button>
+    </div><!-- .btn_wrap end -->
+</body>
+
+</html>

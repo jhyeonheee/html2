@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43_입력양식폼</title>
+    <link rel="stylesheet" href="css/43.css">
+</head>
+<body>
+    <h2>입력 양식 데이터 전송</h2>
+    <form action="page.jsp" method="post">
+
+        <p>ID : <input type="text" name="id" id=""></p>
+        <p>PW : <input type="password" name="psw" id=""></p>
+
+        <label for="form-name">이름</label>  <!-- 이름 클릭 시 입력창에 커서 생기게 함 -->
+        <input type="text" name="name" id="form-name" required placeholder="이름을 입력해주세요"> <!-- required = 내용 미입력 시 " 이 입력란을 작성하세요" 창 뜸 -->
+
+        <textarea name="name" id="" rows="5" cols="20" placeholder="리뷰,질문,주관식"></textarea>
+        <!-- 영문기준 row => 세로줄수 
+         cols 가로 글자수-->
+
+         <h3>당신의 강의실은 몇호입니까</h3>
+         <div class="radio">
+            <label for="1">1001호</label>
+            <input type="radio" name="classroom" value="room1" id="1" checked> <!-- value : 구분시켜주기 -->
+
+            <label for="2">1002호</label>
+            <input type="radio" name="classroom" value="room2" id="2">
+
+            <label for="3">1003호</label>
+            <input type="radio" name="classroom" value="room3" id="3">
+
+            <label for="4">1004호</label>
+            <input type="radio" name="classroom" value="room4" id="4">
+         </div><!-- .radio end  -->
+
+         <div class="check">
+        <h3>현재 관심을 가지고 있는 학습 주제는 무엇입니까?</h3>
+            <label for="">html5</label>
+            <input type="checkbox" name="subject" value="html5" id="" checked>
+
+            <label for="">css3</label>
+            <input type="checkbox" name="subject" value="css3" id="">
+
+            <label for="">javascript</label>
+            <input type="checkbox" name="subject" value="javascript" id="">
+
+            <label for="">jquary</label>
+            <input type="checkbox" name="subject" value="jquary" id="">
+
+           
+         </div><!-- .check end -->
+
+         <div class="button">
+            <h3>button tag 사용</h3> <!-- 더 많이 사용되는 버튼 태그 -->
+            <button type="button">버튼태그</button> <!-- 링크 걸려야 하면 a태그, 버튼 나타나야하면 button 태그 -->
+
+            <h3>input tag 사용</h3>
+            <input type="button" value="input 버튼">
+         </div><!-- .button end -->
+
+         <div class="select">
+            <h3>관심 있는 학습 주제 한 가지를 선택하세요.</h3>
+            <select name="subject" id="">
+                <option value="1" selected>HTML5</option>
+                <option value="2">CSS3</option>
+                <option value="3">Javascript</option>
+                <option value="4">Jquery</option>
+            </select>
+         </div><!-- .select end -->
+
+         <div class="select-link">
+            <h3>관련 사이트</h3>
+            <select name="" id="" onchange="window.open(value, '_blank')">
+                <option value="">관련사이트</option>
+
+                <opgroup> <!-- 스타일 작성에 제한있음  -->
+                    <option value="https://www.naver.com/">네이버</option>
+                    <option value="https://www.gdweb.co.kr/main/">gdweb</option>
+                    <option value="https://www.w3schools.com/">w3school</option>
+                </opgroup>
+            </select>
+         </div><!-- .select-link end -->
+
+         <h3>숫자 입력 폼</h3>
+         <input type="number" name="" id="">
+
+         <h3>날짜 양식</h3>
+         <input type="date" name="" id="" value="2025-01-01">
+
+         <h3>시간 양식</h3>
+         <input type="time" name="" id="" value="09:00:00">
+
+         <h3>색상선택 양식</h3>
+         <input type="color" name="" id="" value="#ff0000">
+
+        <input type="submit" value="전송">
+        <input type="reset" value="다시 작성">
+    </form>
+
+    
+</body>
+</html>

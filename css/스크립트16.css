@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.section {
+    background: url('../img/디저트1.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+    
+}
+
+.section .inner {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* position:sticky 적용 하려면 필요 / h3와 inner가 justi-space..영향으로 같은 가로길이를 가졌기 때문에 이를 바꾸기위해 필요 */
+}
+
+.section .inner h3 {
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(255, 0, 128);
+    position: sticky;
+    top: 100px;
+}
+
+.section .inner .list {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.section .inner .list .item {
+    width: 300px;
+    background-color: white;
+    padding: 30px;
+}
+.section .inner .list .item  img.item_image {
+    display: none;
+}
+
+.section .inner .list .item  .text {
+
+}
+.section .inner .list .item  .text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: rgb(255, 0, 128);
+}
+.section .inner .list .item  .text p {
+    line-height: 1.3;
+    font-size: 15px;
+}

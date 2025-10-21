@@ -1,0 +1,58 @@
+@charset "utf-8" ;
+@import url('reset.css');
+
+.header{
+    height: 100px;
+    background-color:#b6cbce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-visual{
+    height: 100vh;
+}
+
+.main-visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-01 {
+    height: 100vh;
+    background-color:#ffdcc4;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-02 {
+    height: 100vh;
+    background-color: rgb(227, 242, 255);
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_btn{
+    position: fixed;
+    right: 80px;
+    bottom: 80px;
+    background-color: rgba(255, 255, 255, 0.664);
+    border: 1px solid #b5d5ff;
+    padding: 10px;
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+.top_btn.active{
+    display: block;
+}

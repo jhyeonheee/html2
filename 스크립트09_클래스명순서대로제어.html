@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스명09_클래스명순서대로제어</title>
+    <link rel="stylesheet" href="css/스크립트09.css">
+
+    <script>
+        window.onload = () => {
+
+            let item = document.getElementsByClassName('item'); //인덱스값 안쓰면 문서에 있는 모든 아이템으로 지정됨
+            let btn = document.getElementsByClassName('btn')[0];
+
+            let i = 0;
+
+            //classList.add('클래스명') 클래스명 추가
+            //classList.remove('클래스명') 클래스명 삭제
+            //item[2].classList.add('active')
+            //item[0].classList.remove('active')
+
+            btn.addEventListener('click', () => {
+
+                i++;
+                item[i - 1].classList.remove('active')  // 순서가 매우 중요** 위에는 i=1인데 if 절 아래에 i=0을 적용하면서 i값이 0이 되어버림 그래서 if아래에 적용 시 오류
+
+                if (i >= item.length) {
+                    i = 0;
+                }
+                console.log(i)
+                
+                item[i].classList.add('active');
+
+
+
+            });
+
+
+
+
+        }//script end
+    </script>
+</head>
+
+<body>
+    <div class="list">
+        <div class="item active">아이템 1</div><!-- .item end -->
+        <div class="item">아이템 2</div><!-- .item end -->
+        <div class="item">아이템 3</div><!-- .item end -->
+        <div class="item">아이템 4</div><!-- .item end -->
+        <div class="item">아이템 5</div><!-- .item end -->
+    </div><!-- .list end -->
+
+    <button class="btn">🔘</button>
+</body>
+
+</html>

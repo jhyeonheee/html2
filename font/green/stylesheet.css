@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Yoon Childfundkorea DaeHan';
+    src: url('YoonChildfundkoreaDaeHan.eot');
+    src: url('YoonChildfundkoreaDaeHan.eot?#iefix') format('embedded-opentype'),
+        url('YoonChildfundkoreaDaeHan.woff2') format('woff2'),
+        url('YoonChildfundkoreaDaeHan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yoon Childfundkorea ManSeh';
+    src: url('YoonChildfundkoreaManSeh.eot');
+    src: url('YoonChildfundkoreaManSeh.eot?#iefix') format('embedded-opentype'),
+        url('YoonChildfundkoreaManSeh.woff2') format('woff2'),
+        url('YoonChildfundkoreaManSeh.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

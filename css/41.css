@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 기본 end */
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 255, 30);
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: animationBall;
+    animation-iteration-count: infinite;
+    /* 애니메이션 횟수  / infinite(반복) or 숫자(제한)*/
+    animation-timing-function: linear;
+    /* 애니메이션 움직임 속도 / linear:일정속도 */
+    animation-duration: 5s;
+    /* 애니메이션 시간 */
+    animation-direction: alternate;/* 애니메이션 방향 설정 / 여러개 값 사용 가능 / 
+    alternate(정방향에서 번갈아가며 움직) / reverse(반대방향에서 시작) /  alternate-reverse( 반대방향에서 번갈아가며 움직임) */
+
+}
+
+.text {
+    background-color: rgb(114, 187, 42);
+    color: #222;
+    font-size: 40px;
+    margin-top: 300px;
+    overflow: hidden;
+}
+
+.text ul{
+    display: flex;
+    gap: 40px;
+    animation: textslide 10s infinite alternate linear;
+}
+
+@keyframes textslide {
+    0%{
+        transform:translateX(0%);
+    }
+    100%{
+        transform:translateX(-80%);
+    }
+}
+
+.text ul li{
+    white-space: nowrap;
+}
+
+
+
+/* 애니메이션 실행법 : @keyframes 애니메이션 이름 {실행문}*/
+@keyframes animationBall {
+    0% {
+        width: 150px;
+
+
+    }
+
+    50% {
+        transform: translate(50px , 100px);
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    100% {
+        width: 200px;
+        background-color: darkorange;
+        transform: rotate(180deg) translateX(150px);
+    }
+}

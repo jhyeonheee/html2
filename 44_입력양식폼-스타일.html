@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44_입력양식폼-스타일</title>
+    <link rel="stylesheet" href="css/44.css">
+</head>
+
+<body>
+    <section class="form">
+        <form action="">
+            <div class="box">
+                <label for="name">이름</label>
+                <input type="text" name="name" id="name1" placeholder="이름 입력해주세요.">
+            </div><!-- .box end -->
+
+            <div class="box">
+                <label for="password">비밀번호</label>
+                <input type="password" name="password" id="password">
+            </div><!-- .box end -->
+
+            <div class="check">
+                <h3>점심 메뉴 추천</h3>
+                <ul>
+                    <li><!-- 순서가 중요!!!!! -->
+                        <input type="checkbox" name="food" value="food1" id="food1" checked>
+                        <label for="food1">떡볶이</label>
+                    </li> <!-- input이 먼저 나와야 스타일 적용 가능 + 아이디명과 label의 for명을 지정해야함 -->
+
+                    <li>
+                        <input type="checkbox" name="food" value="food2" id="food2" >
+                        <label for="food2">마라탕</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="food" value="food3" id="food3">
+                        <label for="food3">치킨</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="food" value="food4" id="food4">
+                        <label for="food4">피자</label>
+                    </li>
+
+                </ul>
+            </div><!-- .check end -->
+        </form>
+    </section><!-- form end -->
+</body>
+
+</html>

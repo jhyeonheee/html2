@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트05_조건식-속성</title>
+    <link rel="stylesheet" href="css/스크립트05.css">
+
+    <script>
+        window.onload = () => {
+
+            let box = document.getElementsByClassName('box')[0];
+            let boxImage = box.getElementsByTagName('img')[0];
+            let boxBtn = box.getElementsByClassName('box_btn')[0];
+
+            let section = document.getElementsByClassName('section')[0];
+            let sectionImg = document.getElementsByTagName('img')[1];
+            let sectionBtn = document.getElementsByClassName('section_btn')[0];
+
+            boxBtn.addEventListener ('click' , () => {
+                /* alert() */
+                if(boxImage.getAttribute('src')=='img/가벼운 비.jpg'){
+                    /* alert('조건맞음'); */
+                    boxImage.src = 'img/해변 파도.jpg';
+                }else {
+                    /* aleat('조건맞지않음'); */
+                    boxImage.src = 'img/가벼운 비.jpg';
+                }
+        });/* box end */
+
+        sectionBtn.addEventListener('click' , () => {
+            /* alert() */
+            if(sectionImg.getAttribute('src')=='img/강가.jpg'){
+                sectionImg.src = 'img/벽난로.jpg';
+            } else {
+                sectionImg.src = 'img/강가.jpg';
+            }
+
+        });/* section end */
+
+        };/* script end */
+    </script>
+</head>
+<body>
+    <div class="box">
+        <img src="img/가벼운 비.jpg" alt="사진">
+        <button class="box_btn">이미지변경</button><!-- .box_btn end -->
+
+    </div><!-- .box end -->
+
+    <div class="section">
+        <img src="img/강가.jpg" alt="사진">
+        <button class="section_btn">🔥💦</button><!-- .section_btn end -->
+
+    </div><!-- .section end -->
+</body>
+</html>

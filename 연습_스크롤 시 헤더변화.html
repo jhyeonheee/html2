@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>스크롤 헤더 변화</title>
+    <link rel="stylesheet" href="css/연습_스크립트 11.css">
+    <script>
+        window.onload = () => {
+
+
+            let header = document.getElementsByClassName('header')[0];
+
+            window.addEventListener('scroll' , () => {
+                //alert(); 스크립트 적용되는지 확인(팝업)
+                //window.scrollY;
+                let scrollBar = window.scrollY;
+                console.log(scrollBar); //test용
+
+                //스크롤바의 값이 0보다 크면 실행
+                //alert()
+                /* if(scrollBar > 0) {
+                    alert()
+                } */
+
+                //조건문
+                //스크롤바의 값이 200보다 크면 실행
+                //header에게 클래스명 active 추가
+                //조건이 맞지 않으면
+                //header에게 클래스명 active 삭제
+
+                if(scrollBar > 200) {
+                    header.classList.add('active');
+                } else {
+                    header.classList.remove('active');}
+
+               /*  if(scrollBar < 1420) {
+                    header.classList.remove('active');
+                } */
+
+            });
+        }; //script end
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/Explosion.svg" alt="logo">
+                </a>
+            </h1><!-- .logo end -->
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .nav end -->
+
+            <ul class="util">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul><!-- .util end -->
+        </div><!-- .;inner end -->
+    </header><!-- .header end -->
+
+    <main class="main">
+        <section class="main-visual">
+            <img src="img/가벼운 비.jpg" alt="rain">
+        </section><!-- .main-visual end -->
+    </main><!-- .main end -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트03_검색박스나타나기</title>
+    <link rel="stylesheet" href="css/스크립트03.css">
+
+    <script>
+
+        window.onload = () => {
+
+            let openBtn = document.getElementsByTagName('button')[0];
+            let search_box = document.getElementsByClassName('search_box')[0];
+            let closeBtn = document.getElementsByTagName('button')[1];
+
+            openBtn.addEventListener('click', () => {
+                
+                search_box.style.display = 'flex'
+                closeBtn.style.display = 'flex'
+                openBtn.style.display = 'none'
+
+            })
+
+            closeBtn.addEventListener('click', () => {
+                search_box.style.display = 'none'
+                closeBtn.style.display = 'none'
+                openBtn.style.display = 'flex'
+            })
+
+
+
+        };
+    </script> <!-- script end -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">🦄</a>
+            </h1><!-- .logo end -->
+
+            <div class="nav">
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul><!-- .gnb end -->
+            </div><!-- .nav end -->
+
+            <div class="search_wrap">
+                <button class="open_btn">🤷‍♂️</button>
+                <button class="close_btn">🙅‍♂️</button>
+
+                <div class="search_box">
+                    <input type="text" name="" id="" placeholder="검색어를 입력해주세요.">
+                    
+                </div><!-- .search_box end -->
+            </div><!-- .search_wrap end -->
+
+
+        </div><!-- .inner end -->
+    </header><!-- .header end -->
+</body>
+
+</html>

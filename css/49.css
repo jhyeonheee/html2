@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import url('reset.css');
+@import url('common-49.css');
+
+.section-01{
+    padding: 160px 0;
+}
+
+.section-01 .inner{
+    max-width: 1500px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    
+}
+.section-01 .inner h2{
+    font-size: var(--fontSize-heading1);
+    margin-bottom: var(--margin-b-lg);
+
+}
+
+.section-01 .inner h2 span{
+    color: var(--color-point);
+}
+
+.section-01 .inner .item_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.section-01 .inner .item_wrap .image{
+    width: 51.02%;
+    height: 592px;
+}
+
+.section-01 .inner .item_wrap .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-01 .inner .item_wrap .text_wrap{
+    width: 42.66%;
+}
+
+.section-01 .inner .item_wrap .text_wrap .item_title h4{
+    font-size: 48px;
+    margin-bottom: var(--margin-b-md);
+}
+.section-01 .inner .item_wrap .text_wrap .item_title p{
+    font-size: var(--fontSize-md)
+}
+.section-01 .inner .item_wrap .text_wrap .link_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 68px;
+}
+
+.section-01 .inner .item_wrap .text_wrap .link_wrap a{
+    display: block;
+}
+.section-01 .inner .item_wrap .text_wrap .link_wrap li{
+    width: 48.43%;
+    height: 64px;
+    border-radius: 40PX;
+    font-size: var(--fontSize-md);
+    font-weight: 500;
+    border: 1px solid var(--color-bolder);
+    
+   /* 버튼 전체 x 텍스트에만 링크 적용됨
+    display: flex;        
+    align-items: center;
+    justify-content: center; */
+
+    text-align: center;   /* 버튼 전체에 링크 적용됨 */
+    line-height: 64px; 
+    color: var(--color-point);
+}
+
+@media screen and (max-width: 1024) {
+    
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트04_조건식-스타일</title>
+    <link rel="stylesheet" href="css/스크립트04.css">
+    <script>
+        window.onload = () => {
+            let body = document.getElementsByTagName('body')[0];
+            let modeBtn = document.getElementsByClassName ('mode_btn')[0];
+
+            modeBtn.addEventListener('click', () => {
+                //alert();
+                if (getComputedStyle(body).backgroundColor == 'rgb(255, 255, 255)') {
+                    /* alert('조건맞음'); */
+                    body.style.backgroundColor = 'black'
+                    modeBtn.innerHTML = '<p>🌛</p>'
+                } else {
+                    /* alert('조건맞지않음'); */
+                    body.style.backgroundColor = 'white'
+                     modeBtn.innerHTML = '<p>🌞</p>'
+                }
+
+                });
+
+        };/* script end */
+    </script>
+</head>
+<body>
+    <div class="mode_btn">🔄</div><!-- .mode_btn end -->
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트10_좌우버튼클래스명제어</title>
+    <link rel="stylesheet" href="css/스크립트10.css">
+
+
+<script>
+    window.onload = () => {
+
+        let prev = document.getElementsByClassName('prev')[0];
+        let next = document.getElementsByClassName('next')[0];
+        let item = document.getElementsByClassName('item');
+
+        let i = 0;
+      
+        next.addEventListener('click' , () => {
+            i++;
+            
+            item[i - 1].classList.remove('active'); //떨어뜨림
+
+             if (i >= item.length) {   //붙임
+                    i = 0;
+                }
+
+                item[i].classList.add('active');  //
+                 
+
+
+
+        }); //next
+
+        prev.addEventListener('click' , () => {
+            i--;
+              item[i + 1].classList.remove('active'); //붙임
+
+             if(i < 0) {
+                    i = item.length - 1 ;
+                }
+
+                 item[i].classList.add('active');
+
+                 
+
+                 
+
+        }); //prev
+
+
+    }; //script
+
+</script>
+
+</head>
+<body>
+    <section class="section">
+        <div class="list">
+            
+            <div class="item active">
+                <img src="img/강가.jpg" alt="img">
+                <div class="text">
+                    <h2>item title 1</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim molestias corrupti, error distinctio repudiandae natus voluptatem sed facilis, consequatur excepturi commodi cumque ut laboriosam! Dolore iusto tempore distinctio consequuntur impedit.</p>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+
+            <div class="item">
+                <img src="img/가벼운 비.jpg" alt="img">
+                <div class="text">
+                    <h2>item title 2</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim molestias corrupti, error distinctio repudiandae natus voluptatem sed facilis, consequatur excepturi commodi cumque ut laboriosam! Dolore iusto tempore distinctio consequuntur impedit.</p>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+
+            <div class="item">
+                <img src="img/해변 파도.jpg" alt="img">
+                <div class="text">
+                    <h2>item title 3</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim molestias corrupti, error distinctio repudiandae natus voluptatem sed facilis, consequatur excepturi commodi cumque ut laboriosam! Dolore iusto tempore distinctio consequuntur impedit.</p>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+
+            <div class="item">
+                <img src="img/벽난로.jpg" alt="img">
+                <div class="text">
+                    <h2>item title 4</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim molestias corrupti, error distinctio repudiandae natus voluptatem sed facilis, consequatur excepturi commodi cumque ut laboriosam! Dolore iusto tempore distinctio consequuntur impedit.</p>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+
+            <div class="item">
+                <img src="img/보통 비.jpg" alt="img">
+                <div class="text">
+                    <h2>item title 5</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim molestias corrupti, error distinctio repudiandae natus voluptatem sed facilis, consequatur excepturi commodi cumque ut laboriosam! Dolore iusto tempore distinctio consequuntur impedit.</p>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+
+        </div><!-- .list end -->
+
+        <div class="btn">
+            <button class="prev">이</br>전</button>
+            <button class="next">다</br>음</button>
+        </div><!-- .btn end -->
+    </section><!-- .section end -->
+</body>
+</html>

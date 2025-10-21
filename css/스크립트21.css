@@ -1,0 +1,69 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.nav_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;/* display flex로 인한 높이변화 막는 방법 */
+    /* background-color: aliceblue; */
+    margin: 50px;
+}
+.nav_wrap .nav {
+    width: 30%;
+    border: 1px solid #333;
+    
+}
+
+.nav_wrap .nav {}
+.nav_wrap .nav .gnb {}
+.nav_wrap .nav .gnb > li {}
+.nav_wrap .nav .gnb > li a.depth-01 {
+    height: 60px;
+    display: block;
+    background-color: rgb(40, 40, 255);
+    line-height: 60px;
+    padding: 0 20px;
+    color: aliceblue;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav_wrap .nav .gnb > li a.depth-01::before{
+    content:'';
+    background: url('../img/스크립트\ 21.svg') center center / 100% no-repeat;
+    width: 15px; /* 가상요소 선택자 사용 시 넓이, 높이값 필수!!!!! */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+}
+
+.nav_wrap .nav .gnb > li a.depth-01.active::before{
+    transform: rotate(180deg);
+    transition: 1s;
+}
+.nav_wrap .nav.nav-01 .gnb > li a.depth-01.active{
+    background-color:orangered;
+}
+
+.nav_wrap .nav.nav-02 .gnb > li a.depth-01.active{
+    background-color:rgb(136, 255, 0);
+    color: black;
+}
+
+.nav_wrap .nav.nav-03 .gnb > li a.depth-01.active{
+    background-color:rgb(251, 255, 0);
+    color: black;
+}
+
+.nav_wrap .nav .gnb > li .depth-02 {
+    display: none;
+}
+.nav_wrap .nav .gnb > li .depth-02 li {
+    border-bottom: 1px dashed rgb(196, 196, 255);;
+}
+.nav_wrap .nav .gnb > li .depth-02 li a {
+    display: block;
+     padding: 20px;
+}

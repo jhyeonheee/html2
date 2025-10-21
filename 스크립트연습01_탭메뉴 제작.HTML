@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트 연습_01</title>
+    <link rel="stylesheet" href="css/스크립트연습01.css">
+
+    <script>
+        window.onload = () => {
+            let Menu = document.querySelectorAll('.menu li');
+            let Cont = document.querySelectorAll('.list');
+
+            for (let i = 0; i < Menu.length; i++) {
+                Menu[i].addEventListener('click', () => {
+                    console.log(i)
+                    
+                    Menu.forEach(MenuIndex => {
+                        MenuIndex.classList.remove('active')
+                    });
+
+                
+
+                Menu[i].classList.add('active')
+
+                Cont.forEach(ContIndex => {
+                    ContIndex.classList.remove('active')
+                });
+
+                Cont[i].classList.add('active');
+
+                });
+            }
+
+        };//script end
+    </script>
+</head>
+<body>
+    <section class="section">
+        <div class="inner">
+            <h2>🍱점메추🍰</h2>
+            <ul class="menu">
+                <li class="active">한식</li>
+                <li>분식</li>
+                <li>양식</li>
+                <li>일식</li>
+                <li>디저트</li>
+            </ul><!-- .menu end -->
+
+            <div class="list active">
+                <div class="item">
+                    <img src="img/한식1.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/한식2.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/한식3.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/한식4.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+
+            <div class="list">
+                <div class="item">
+                    <img src="img/분식1.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/분식2.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/분식3.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/분식4.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+            </div><!-- .list / 2 end -->
+
+            <div class="list">
+                <div class="item">
+                    <img src="img/양식1.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/양식2.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/양식3.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/양식4.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+            </div><!-- .list / 3 end -->
+
+            <div class="list">
+                <div class="item">
+                    <img src="img/일식1.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/일식2.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/일식3.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/일식4.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+            </div><!-- .list / 4end -->
+
+            <div class="list">
+                <div class="item">
+                    <img src="img/디저트1.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/디저트2.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/디저트3.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/디저트4.jpg" alt="한식">
+                    <p>떡볶이</p>
+                </div><!-- .item end -->
+            </div><!-- .list / 5 end -->
+
+        </div><!-- .inner end -->
+    </section><!-- .section end -->
+</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 기본 end */
+
+.section .inner{
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 38px;
+}
+
+.section .inner > div{
+    width: 31.59%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section .inner > div{
+    height: 455px;
+   
+}
+
+.section .inner .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1;
+}
+.section .inner > div .image{
+     padding-bottom: 100%;
+}
+
+
+.section .inner > div .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section .inner .item{
+    position: relative;
+}
+
+.section .inner .item:nth-child(2) {
+    order: -1;
+}
+
+.section .inner .item.item-big{
+    width: 48.75%;
+}

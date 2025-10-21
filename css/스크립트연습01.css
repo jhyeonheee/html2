@@ -1,0 +1,69 @@
+@charset "utf-8";
+@import url('reset.css');
+
+
+.section {
+    background-color:rgb(255, 253, 231);
+    padding: 100px 0;
+}
+
+.section .inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.section .inner h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.section .inner .menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.section .inner .menu li {
+    background-color: white;
+    padding: 0 30px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    border: 1px solid #ffce63;
+}
+
+.section .inner .menu li.active{
+    background-color: #ffce63;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.section .inner .list {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.section .inner .list.active{
+    display: flex;
+}
+
+.section .inner .list .item {
+    width: 24%;
+}
+
+.section .inner .list .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.section .inner .list .item p {
+    font-size: 18px;
+    font-weight: 500;
+}

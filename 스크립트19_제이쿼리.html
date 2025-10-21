@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트 19_제이쿼리</title>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let text1 = document.querySelector('.text-01');
+            text1.addEventListener('click', () => {
+                alert();
+            }); //javascript
+
+             let text2 = $('.text-02');
+        text2.on('click' , function(){
+            alert();
+        }); //Jquery
+
+        });//script
+
+       
+    </script>
+</head>
+<body>
+    <p class="text-01">텍스트 1</p><!-- 자바 스크립트 방식 -->
+    <p class="text-02">텍스트 2</p><!-- 제이쿼리 방식 -->
+
+    <button type="button">버튼</button>
+</body>
+</html>

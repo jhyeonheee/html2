@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.header {
+    height: 80px;
+    background-color: rgb(198, 162, 255);
+    position: relative;
+}
+.header .inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header .inner .logo  {}
+.header .inner .logo a {
+    display: block;
+    font-size: 50px;
+}
+
+.header .inner  .nav {
+
+}
+.header .inner  .nav .gnb {
+    display: flex;
+}
+.header .inner  .nav .gnb > li {
+    position: relative;
+}
+
+.header .inner  .nav .gnb > li .depth-01 {
+    display: block;
+    line-height: 80px;
+    padding: 0 20px;
+}
+.header .inner  .nav .gnb > li .depth-02 {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: rgb(120, 35, 255);
+    width: 100%;
+    border: 1px solid #e0c9ff;
+    text-align: center;
+    color: white;
+    display: none;
+    z-index: 1000000000;
+}
+.header .inner  .nav .gnb > li .depth-02 li {}
+.header .inner  .nav .gnb > li .depth-02 li a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.header .bg {
+    width: 100%;
+    background-color: #4500a0;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: none;
+}
+.header .bg span {
+    position: absolute;
+    left: -9999999999999999;
+}

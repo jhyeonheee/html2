@@ -1,0 +1,71 @@
+@charset "utf-8" ;
+@import url('reset.css');/* css파일끼리 연결하는 방법 */
+@import url('47common.css');
+
+/* .main */
+/* .main-visual */
+
+
+.main-visual{
+    height: calc(100vh - 100px); /* 외워!!! */
+    position: relative;
+}
+
+.main-visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-visual .text{
+    max-width: 1400px;    /* 헤더와 같은 X위치에 배치하는 방법 */
+    width: calc(100% - 32px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    color: rgb(255, 255, 255);
+    
+}
+
+.main-visual .text h2{
+    font-size: 80px;
+    font-family: 'SB-Aggro';
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.main-visual .text p{
+    font-size: 20px;
+}
+
+.section-01{
+    padding: 160px;
+}
+
+.section-01 .list{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.section-01 .list .item  {
+    width: 23.21%;
+}
+.section-01 .list .item a {
+    
+}
+.section-01 .list .item a .image {
+    padding-bottom: 109.84%; /* 높이 / 넓이 *100 */
+    position: relative;
+}
+.section-01 .list .item a .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+

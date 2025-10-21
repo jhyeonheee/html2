@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트02_선택자지정</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            line-height: 1;
+        }
+        
+        .popup{
+            width: 400px;
+        }
+
+        .popup img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .popup button{
+            width: 100%;
+            height:50px;
+            background-color:rgb(116, 22, 22);
+            border: 5px solid #952121;
+            color: white;
+        } 
+
+        .box{
+            width: 300px;
+            margin-top: 100px;
+        }
+
+        .box img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .box button{
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background-color: black;
+            color: white;
+        }
+
+        .pop{
+            width: 500px;
+            position: relative;
+        }
+
+       
+        
+
+        .pop .img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+       
+
+        .pop .inner .title{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+
+        .pop .inner .title h1{
+            font-size: 100px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .pop .inner .title p{
+            font-size: 20px;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pop button{
+            width: 100px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            position: relative;
+            top: -100px;
+            left: 145px;
+        }
+        
+
+    </style><!-- style end -->
+    <script>
+        window.onload = () => {
+            /* 요소찾기(선택자찾기) */
+            /*  document.getElementsByTagName('button')[0]; */
+            /* 버튼을 클릭했을 때 실행 */
+
+            //변수 : 데이터를 담는 그릇
+            //변수선언 변수명 = 데이터;
+            /* let letName = 데이터; */
+
+            let btn = document.getElementsByTagName('button')[0];
+            let text01 = document.getElementsByTagName('div')[0];
+            let text02 = document.getElementsByClassName('text-02')[0];
+            let text03 = document.getElementById('text-03');
+
+
+            btn.addEventListener('click', () => {
+                text01.style.backgroundColor = 'orange';
+                text02.style.color = 'yellowgreen';
+                text03.style.fontSize = '30px';
+                text03.style.fontWeight = 'bold';
+                //
+            });
+
+            //팝업 닫기
+            
+            let popup = document.getElementsByClassName('popup')[0];
+            let popupBtn = document.getElementsByTagName('button')[1];
+
+            popupBtn.addEventListener('click' , () => {
+                popup.style.display = 'none';
+
+
+            })
+            /* 이미지 변경 + 글자 변경 */
+            let boxImage = document.getElementsByTagName('img')[1];
+            let boxBtn = document.getElementsByTagName('button')[2];
+
+            boxBtn.addEventListener('click' , () => {
+                boxImage.src = 'img/코코(1).jpg';
+                boxBtn.innerText = '🐶';
+            });
+
+
+            let exit = document.getElementsByTagName('button')[3];
+            let next = document.getElementsByTagName('button')[4];
+            let pop = document.getElementsByClassName('pop')[0];
+            let img = document.getElementsByClassName('img')[0];
+
+            exit.addEventListener('click' , () => {
+                pop.style.display = 'none';
+            });
+
+            next.addEventListener('click' , () => {
+                img.src = 'img/벽난로.jpg';
+            });
+
+        };/* script end */
+    </script>
+</head>
+
+<body>\
+    <button>버튼</button>
+
+    <div>내용 1</div>
+    <div class="text-02">내용 2</div>
+    <id id="text-03">내용 3</id>
+
+
+    <div class="popup">
+        <img src="img/벽난로.jpg" alt="사진">
+        <button>팝업닫기</button>
+    </div><!-- .popup end -->
+
+    <div class="box">
+        <img src="img/코코(2).jpg" alt="코코">
+        <button>이미지변경</button>
+    </div><!-- .box end -->
+
+    <div class="pop">
+        <img src="img/해변 파도.jpg" alt="사진" class="img">
+        <div class="inner">
+            <div class="title">
+                <h1>50% </br> SALE</h1>
+                <p>SPECIAL OFFER 10.29</p>
+            </div><!-- .title end -->
+            
+            <button>EXIT</button>
+            <button>NEXT</button>
+        </div><!-- .inner end -->
+    </div><!-- .pop end -->
+</body>
+
+</html>

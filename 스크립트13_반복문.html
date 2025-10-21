@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트13_반복문</title>
+    <link rel="stylesheet" href="css/스크립트13.css">
+
+    <script>
+        window.onload = () => {
+                                            // querySelector: 첫번쨰 li만 지정./ 모두지정 원한다면 .querySelectorall
+            let menu = document.querySelectorAll('.menu li'); //선택자(클래스, 태그, 아이디 등) 지정 안하고 지정가능
+                                                           //css에서 작성하던 선택자 방식과 동일
+
+
+            //반복문
+            //for(초기식;조건식;증감식){실행코드}                                                           
+            for( let i = 0; i < menu.length; i++) {  //탭 메뉴 작성 시 필수코드
+                menu[i].addEventListener('click', () => {  
+                    console.log(i)
+                    menu[i].classList.add('active');  
+                });
+            }
+
+
+
+        }; //script end
+    </script>
+</head>
+<body>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul><!-- .menu end -->
+</body>
+</html>

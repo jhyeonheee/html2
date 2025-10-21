@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트08_좌우버튼이미지변경</title>
+    <link rel="stylesheet" href="css/스크립트08.css">
+    <script>
+        window.onload = () => {
+            let box = document.getElementsByClassName('box')[0];
+            let boxImage = box.getElementsByTagName('img')[0];
+            let boxPrev = box.getElementsByTagName('button')[0];
+            let boxNext = box.getElementsByTagName('button')[1];
+            //text
+            let boxNum = box.getElementsByClassName('num')[0];
+            let boxAllNum = box.getElementsByClassName('all_num')[0];
+
+
+            let i = 0;
+            let imageList = ['img/해변 파도.jpg', 'img/2.png', 'img/3.png', 'img/4.png'];
+            let textList = ['1', '2', '3', '4'] 
+
+            //length => 개수,길이 구하기
+            console.log(imageList.length);
+
+            // 전체 이미지 수 작성 => .all_num
+            //innerHTML = 
+            //boxAllNum.innerHTML = '/' + imageList.length;/* 총 이미지 개수에 대한 텍스트 삽입 */
+            // '문자' 혹은 숫자(1,2,3..) + 를 하면 연결해서 이어줌
+            boxAllNum.innerHTML = '<b>/</b>' + imageList.length; // 문자 태그 넣어주기
+            boxNext.addEventListener('click', () => {
+                i++;
+                console.log(i);
+
+                if (i >= imageList.length) {
+                    i = 0
+                }
+                boxImage.src = imageList[i];
+                boxNum.innerHTML = textList[i]; // 얘는 이미지가 늘어날떄마다 let textList의 값도 수정해야해서 번거로움(불편)
+                //boxNum.innerHTML = i+1; //얘는 이미지가 늘어나면 숫자도 자동으로 늘어남(간편)
+
+
+            });
+
+
+
+
+            boxPrev.addEventListener('click', () => {
+                i--;
+                console.log(i);
+
+                if (i < 0) {
+                    i = imageList.length - 1;/* -1을 하는 이유 : 원래 값이 3인데 전체 이미지 수는 4이기 떄문 */
+                }
+                boxImage.src = imageList[i];
+                //boxNum.innerHTML = textList[i];
+                boxNum.innerHTML = i + 1;
+
+
+            });
+
+
+
+
+
+        };/* script end */
+
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/해변 파도.jpg" alt="해변파도">
+
+        <div class="btn">
+            <button class="prev">◀</button>
+            <button class="next">▶</button>
+        </div><!-- .btn end -->
+
+        <div class="page">
+            <span class="num">1</span>
+            <span class="all_num"></span>
+        </div><!-- .page end -->
+
+    </div><!-- .box end -->
+</body>
+
+</html>

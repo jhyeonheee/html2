@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_반응형</title>
+    <link rel="stylesheet" href="lib/fullpage.css">
+    <link rel="stylesheet" href="css/02.css">
+
+    <script src="lib/fullpage.js"></script>
+    <script>
+        window.onload = () => {
+            var myFullpage = new fullpage('#fullpage', {
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['주소창을', '한번', '봐라'], //주소창에 있는 이름
+                navigation: true,
+                navigationTooltips: ['Page 1', 'Page 2', 'Any text!'], // nav에 노출되는 텍스트
+                showActiveTooltip: true, // true: 그냥 보여짐 false: 마우스 호버 보여짐
+                responsiveWidth: 640
+                , //화면 넓이에 따라 스크롤 여부 달라짐(숫자 이하)
+                afterResponsive: function (isResponsive) {
+
+                }
+                //menu: '#menu'
+            });//script end
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="intro">
+                <h1>Section 1</h1>
+                <p>
+                    Use the `navigationTooltips` option to use a text for each of the bullets in the navigation element.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat atque laudantium cum.
+                    Dolor doloribus enim amet, hic quae quisquam facere voluptates pariatur sunt, et nesciunt assumenda
+                    non omnis consequuntur.</p>
+            </div><!-- .intro end -->
+
+        </div><!-- #section0 end -->
+        <div class="section fp-auto-height-responsive" id="section1">
+            <h1>Section 2</h1>
+        </div><!-- #section1 end -->
+
+        <div class="section" id="section2">
+            <h1>Section 3</h1>
+        </div>#section2 end
+    </div><!-- fullpage end -->
+
+</body>
+
+</html>

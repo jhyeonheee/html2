@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트16_배경이미지값 적용</title>
+    <link rel="stylesheet" href="css/스크립트16.css">
+    <script>
+        window.onload = () => {
+            let section = document.querySelector('.section');
+            let item = section.querySelectorAll('.item');
+            let itemImage = section.querySelectorAll('.item .item_image');
+            //for
+            //item에게 마우스를 올렸을 때(mouseenter)
+            //section에게 스타일 적용 backgroundImage의 값 적용
+            //='url(파일명.확장자명)';
+            
+            for (let i = 0; i < item.length; i++) {
+
+                item[i].addEventListener('mouseenter', () => {
+                    //section.style.backgroundImage = 'url("img/디저트5.jpg")';
+                    section.style.backgroundImage = 'url(' + itemImage[i].src + ')'//문자 + 변수 방법 / 문자 + 숫자에도 활용됨(+기호 추가하깅)
+                    console.log(itemImage[i].src)
+                    itemImage.src = itemImage[i].src;
+                });
+                
+
+            } //for
+
+
+
+
+        };//script end
+
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <h3>section title</h3>
+            <div class="list">
+                <div class="item">
+                    <img src="img/디저트9.jpg" alt="디저트🍰" class="item_image">
+                    <div class="text">
+                        <h2>item 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vel sint dignissimos sequi
+                            distinctio ut quidem! Sint aspernatur harum, tenetur fugiat tempore cupiditate molestiae.
+                        </p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/디저트1.jpg" alt="디저트🍰" class="item_image">
+                    <div class="text">
+                        <h2>item 2</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste enim est dolorem nam ipsa
+                            nihil aperiam vero tempore suscipit in voluptates saepe deserunt amet voluptate ullam nisi,
+                            ex non ipsum?
+                        </p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/디저트3.jpg" alt="디저트🍰" class="item_image">
+                    <div class="text">
+                        <h2>item 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit totam facilis ea exercitationem
+                            ex praesentium alias, ipsum amet quibusdam architecto placeat eaque quaerat aperiam cumque
+                            rem, libero consequatur minima aspernatur?
+                        </p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/디저트6.jpg" alt="디저트🍰" class="item_image">
+                    <div class="text">
+                        <h2>item 4</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repellat facere,
+                            molestiae, sapiente voluptatem quaerat voluptas illum aut fuga velit dolore sint,
+                            consequuntur eligendi vel? Facere fugiat sed id libero.
+                        </p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- .section end -->
+</body>
+
+</html>

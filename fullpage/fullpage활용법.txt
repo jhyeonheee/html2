@@ -1,0 +1,7 @@
+fullpage 사용 주의사항
+1. body -> line-height 값 금지
+2. aos금지(오류남)
+3. header -> fullpage 밖에 사용
+4. examples / navigation-tooltips.html(기본)
+5. examples / auto-height.html
+반응형 -> examples / responsive-auto-height.html

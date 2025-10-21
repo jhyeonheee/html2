@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_헤더포함</title>
+    <link rel="stylesheet" href="lib/fullpage.css">
+    <link rel="stylesheet" href="css/01.css">
+
+    <script src="lib/fullpage.js"></script>
+    <script>
+        window.onload = () => {
+            var myFullpage = new fullpage('#fullpage', {
+                /* 삭제가능(스타일) : sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'], */
+                anchors: ['주소창을', '한번', '봐라'], //주소창에 있는 이름
+                navigation: false,
+                navigationTooltips: ['Page 1', 'Page 2', 'Any text!'], // nav에 노출되는 텍스트
+                showActiveTooltip: false, // true: 그냥 보여짐 false: 마우스 호버 보여짐
+                //menu: '#menu'
+            });//script end
+        };//script end
+
+    </script>
+</head>
+
+<body> <!-- #fullpage, .section 손대지 ㄴㄴ -->
+    <header class="header">
+            <p>☁ header ☁</p>
+        </header><!-- .header end -->
+    <div id="fullpage">
+
+        
+
+        <div class="section" id="section0">
+            <div class="intro">
+                <h1>Section 1</h1>
+                <p>
+                    Use the `navigationTooltips` option to use a text for each of the bullets in the navigation element.
+                </p>
+            </div><!-- .intro end -->
+        </div><!-- .section #section0 end -->
+
+        <section class="section" id="section1">
+            <div class="inner">
+                <h2>두번째 섹션</h2>
+                <div class="list">
+                    <div class="item">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis esse voluptatum
+                            totam nam sint enim deleniti, corrupti laborum quae omnis quod modi! Repudiandae est
+                            perspiciatis aliquid voluptates recusandae itaque?</p>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor blanditiis doloremque
+                            inventore magnam, dolores quia. Eius nulla mollitia rerum voluptatum voluptate, explicabo,
+                            fugit, reiciendis repudiandae eaque tempora fuga magni unde!</p>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium nemo ducimus ut
+                            obcaecati, harum quaerat labore doloribus laboriosam ipsum, consectetur, qui reprehenderit?
+                            Nam repellendus ullam fuga recusandae? Libero, deserunt hic!</p>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto ad id porro sed in
+                            non quasi perferendis. Dolor molestias id impedit, ad inventore perspiciatis sunt in dicta
+                            repellat omnis.</p>
+                    </div><!-- .item end -->
+                </div><!-- .list end -->
+            </div><!-- .inner end -->
+        </section><!-- .section #section1 end -->
+
+        <section class="section" id="section2">
+            <div class="inner">
+                <div class="item">
+                    <div class="image">
+                        <img src="img/film_blue(4).jpg" alt="img">
+                    </div><!-- .image end -->
+                    <strong>item 1</strong>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/film_blue(5).jpg" alt="img">
+                    </div><!-- .image end -->
+                    <strong>item 1</strong>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/film_blue(6).jpg" alt="img">
+                    </div><!-- .image end -->
+                    <strong>item 1</strong>
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/film_blue(8).jpg" alt="img">
+                    </div><!-- .image end -->
+                    <strong>item 1</strong>
+                </div><!-- .item end -->
+            </div><!-- .inner end -->
+        </section><!-- .section #section2 end -->
+
+        <footer class="section fp-auto-height" id="footer">
+                <p>FOOTER</p>
+        </footer><!-- .footer.section end -->
+
+    </div><!-- #fullpage end -->
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_연습</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;}
+
+            a{
+                margin-right: 20px;}
+        
+            /* 기본 설정 end */
+
+        .all{
+            margin: 0 auto;
+            width: 375px;
+            background-color: rgba(255, 255, 255, 0.863);
+        }
+        .all .bar{
+            margin: 0 auto;
+            width: 410px;
+        }    
+        .all .pre{
+            margin: 0 auto;
+            width:350px ;
+        
+            
+        } /* .all end */
+        .list1{
+            width:338px ;
+            height: 108px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:  auto;
+            margin-top: 1cm;
+            margin-bottom: 18px;
+            
+        } /* .list1 end */
+        
+        .list1 .item{
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .list1 .item img{
+            width: 71px;
+            height: 71px;
+           
+        }
+
+        .list1 .item .text span{
+            font-size: 14px;
+            color: rgb(91, 91, 91);
+            font-weight: 300;
+            display: block;
+        }
+
+        .list1 .item .text strong{
+            font-size: 16px;
+            line-height: 1.2;
+            display: block;
+            margin-top: 5px;
+        } /* .item end */
+/* list1 end */        
+        .list2{
+            width:338px ;
+            height: 108px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:  auto;
+            margin-bottom: 18px;
+        } /* .list1 end */
+        
+        .list2 .item{
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .list2 .item img{
+            width: 71px;
+            height: 71px;
+        }
+
+        .list2 text{
+            margin: 20px;
+        }
+        .list2 .item .text span{
+            font-size: 14px;
+            color: rgb(91, 91, 91);
+            font-weight: 300;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .list2 .item .text strong{
+            font-size: 16px;
+             
+        } /* .item end */
+
+/* list2 end */       
+        .list3{
+            width:338px ;
+            height: 108px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 18px;
+        } /* .list1 end */
+        
+        .list3 .item{
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .list3 .item img{
+            width: 71px;
+            height: 71px;
+        }
+
+        .list3 .item .text span{
+            font-size: 14px;
+            color: rgb(91, 91, 91);
+            font-weight: 300;
+            display: block;
+            margin-top: 15px;
+
+        }
+
+        .list3 .item .text strong{
+            font-size: 16px;
+        } /* .item end */
+
+/* list3 end */       
+        .list4{
+            width:338px ;
+            height: 108px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:  auto;
+            margin-bottom: 100px;
+
+        } /* .list1 end */
+        
+        .list4 .item{
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .list4 .item img{
+            width: 71px;
+            height: 71px;
+        }
+
+        .list4 .item .text span{
+            font-size: 14px;
+            color: rgb(91, 91, 91);
+            font-weight: 300;
+            display: block;
+             margin-top: 15px;
+        }
+
+        .list4 .item .text strong{
+            font-size: 16px;
+        } /* .item end */
+/* list4 end */
+
+        .button{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .all .button span{
+            font-size: 16px;
+            font-weight: 400;
+            color: #6532E9;
+            width: 339px;
+            height: 50px;
+            background-color:#E8E8FA;
+            margin: auto;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 10px;   
+        }
+     
+        .last{
+            margin: 0 auto;
+            margin-top: 60px;
+            width:134px ;
+        }
+
+    </style>
+<body>
+    <div class="all">
+        <div class="bar"><img src="img/탑(블랙).png" alt=""></div>
+        <div class="pre"><img src="img/prev.png" alt=""></div>
+        <div class="list1">
+            <div class="item">
+                <img src="img/image 13.png" alt="">
+                <div class="text">
+                    <span>소스내추럴</span>
+                    <strong>메가 스트렝스 베타<br/>시토스테롤</strong>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+            <a href="img/active.png"><img src="img/default.png" alt=""></a>
+        </div>  <!-- .list1 end -->  
+
+        <div class="list2">
+            <div class="item">
+                <img src="img/image 14.png" alt="">
+                <div class="text">
+                    <span>뉴트리코스트</span>
+                    <strong>베타알라닌</strong>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+            <a href="img/active.png"><img src="img/default.png" alt=""></a>
+        </div>  <!-- .list2 end -->  
+
+        <div class="list3">
+            <div class="item">
+                <img src="img/image 15.png" alt="">
+                <div class="text">
+                    <span>뉴트리코스트</span>
+                    <strong>베타알라닌</strong>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+            <a href="img/active.png"><img src="img/default.png" alt=""></a>
+        </div>  <!-- .list3 end -->  
+
+        <div class="list4">
+            <div class="item">
+                <img src="img/image 11.png" alt="">
+                <div class="text">
+                    <span>디엘릭서</span>
+                    <strong>CLIN 히스베타킨</strong>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+            <a href="img/active.png"><img src="img/default.png" alt=""></a>
+        </div>  <!-- .list4 end -->  
+        <div class="button">
+            <span>선택완료</span>
+        </div><!-- .botton end -->
+        <div class="last"><img src="img/Base.png" alt=""></div>
+    </div><!-- .all end -->
+</body>
+</html>

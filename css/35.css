@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header {
+    height: 100px;
+    position: relative;
+    z-index: 9999;
+}
+.header .inner {
+    width: 1280px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.header .inner .logo {
+    height: 60px;
+}
+.header .inner .logo a {
+    height: 100%;
+    display: block;
+}
+.header .inner .logo a img {
+    height: 100%;
+}
+
+.header .inner .nav {}
+.header .inner .nav .gnb {
+    display: flex;
+}
+.header .inner .nav .gnb > li {
+    position: relative;
+}
+.header .inner .nav .gnb > li .depth-01 {
+    display: block;
+    line-height: 100px;
+    padding: 0 30px;
+}
+.header .inner .nav .gnb > li .depth-02 {
+    /* width: 100%; */
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #333;
+    white-space: nowrap;
+    display: none;
+}
+.header .inner .nav .gnb > li:hover .depth-02 {
+    display: block;
+}
+.header .inner .nav .gnb > li .depth-02 li {
+    
+}
+.header .inner .nav .gnb > li .depth-02 li:hover {
+    background-color: royalblue;
+    color: #fff;
+}
+.header .inner .nav .gnb > li .depth-02 li a {
+    display: block;
+    padding: 12px 20px;
+}
+ 
+.header .inner .util {
+    display: flex;
+    gap: 16px;
+}
+ 
+
+.main_visual {
+    height: 100vh;
+    position: relative;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main_visual .text h2 {
+    /* 글자크기 : 60px
+    아래쪽 여백 20px */
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.main_visual .text a {
+    width: 160px;
+    height: 50px;
+    background-color: #9eb7ff;
+    display: block;
+    border: 2px solid #000;
+    border-radius: 50px;
+    /* text-align: center; */
+    /* line-height: 46px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* 가로: 160px;
+    세로 : 50px;
+    배경색상
+    그외 기타등등 */
+}
+ 
+ 

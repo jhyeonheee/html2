@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_배경 이미지</title>
+
+    <style>
+        *{ 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        li{list-style: none;}
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        /* 기본end */
+        .bg-01{
+            height: 300px;
+            margin: 50px;
+            color: white;
+            background-color: aqua;
+            background-image: url('img/강가.jpg');
+            background-size: cover; /* cover(최다사용,비율에 맞춰서 가득 채워짐, 이미지 일부 짤림 가능), contain(가로세로 비율 유지하면서 가득채움) */
+            background-repeat:no-repeat;/*repeat(기본값),no repeat(없애기),방향설정> repeat-x(x축 기준 이미지 반복), repeat-y(y축 기준 이미지 반복) */
+            background-position:center center ;/* 첫번째 값 가로, 두번째 세로값 */  
+            
+        } /* 효과 각각 하나씩 적용하는 방법 */
+
+        .bg-02{
+            height: 300px;
+            margin: 50px;
+            color: white;
+            background-color: aquamarine;
+            background: url('img/해변\ 파도.jpg') center center / cover no-repeat;/*  효과 한번에 적용하는 방법(선 위치 / 후 사이즈 순서 바뀌면 ㄴㄴ) */
+        } /* 배경:이미지 경오 x축 위치 y축 위치 / 사이즈 이미지 반복 */
+
+        .bg-03{
+            height: 500px;
+            margin: 50px;
+            color: white;
+            background: url('img/벽난로.jpg') center center / cover no-repeat;
+            background-attachment: fixed;/* 배경 이미지 고정시킴+ 속성값만 background:;안에 넣어 설정 가능(마지막 순서) */
+        }
+
+        .bg-04{
+            height: 300px;
+            margin: 50px;
+            color: white;
+            font-size: 30px;
+            font-weight: 300;
+            font-style:italic;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            background: #622A9B;
+            background: linear-gradient(90deg, rgba(98, 42, 155, 1) 0%, rgba(199, 154, 87, 1) 45%, rgba(237, 83, 106, 1) 100%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg-01">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corporis accusantium harum iusto ipsam eos, quisquam quam laborum in tempora a architecto, sunt perspiciatis reprehenderit, voluptatem molestias. Dolorum, id ducimus.</p>
+    </div><!-- .bg-01 end -->
+
+    <div class="bg-02">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corporis accusantium harum iusto ipsam eos, quisquam quam laborum in tempora a architecto, sunt perspiciatis reprehenderit, voluptatem molestias. Dolorum, id ducimus.</p>
+    </div><!-- .bg-02 end -->
+
+    <div class="bg-03">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corporis accusantium harum iusto ipsam eos, quisquam quam laborum in tempora a architecto, sunt perspiciatis reprehenderit, voluptatem molestias. Dolorum, id ducimus.</p>
+    </div><!-- .bg-03 end -->
+    
+    <div class="bg-04">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corporis accusantium harum iusto ipsam eos, quisquam quam laborum in tempora a architecto, sunt perspiciatis reprehenderit, voluptatem molestias. Dolorum, id ducimus.</p>
+    </div><!-- .bg-04 end -->
+</body>
+</html>
