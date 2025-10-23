@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25_움직이는메뉴</title>
+    <link rel="stylesheet" href="css/스크립트25.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function () {
+            //css에서 position위치 잡아줘야 함
+            //부모를 기준으로 x축의 좌표값 확인
+            //position().left
+            //position().top y축의 좌표값을 확인
+
+            $('.menu-01 ul li').on('mouseenter', function () {
+                //내가 마우스를 올린 요소가 부모를 기준으로 X축 얼마만큼 떨어져 있는지 확인
+                //console.log($(this).position().left)
+
+                let moveLeft = $(this).position().left;
+                //animate: 부드럽게 이동
+                $('.menu-01 .menu_bar').stop().animate({
+                    'left': moveLeft
+                });
+            });//menu-01 end
+
+            //너비값이 다른 메뉴 바
+            //outerWidth() 패딩 + 테두리 포함 된 너비값 찾기
+            //.menu-02 ul li안에 마우스 올렸을 때 실행
+            //.menu-02 .menu_bar에게 animate 적용
+            //left값과 width값 적용
+            //left -> 마우스 올린 요소($(this))의 x축 좌표값
+            //width -> 마우스 올린 요소의 너비값
+
+            let menuWidth = $('.menu-02 ul li:first').outerWidth()
+            $('.menu-02 .menu_bar').width(menuWidth);//직접적으로 값 적용하기(맨처음 li width값과 라인이 알맞지 않음 해결)
+                                                     //이벤트 실행 전 적용되어있어야 함
+            $('.menu-02 ul li').on('mouseenter', function () {
+                //console.log($(this).position().left)
+                //console.log($(this).outerWidth())
+                let moveMove = $(this).position().left;
+                let moveWidth = $(this).outerWidth();
+                $('.menu-02 .menu_bar').stop().animate({
+                    'left': moveMove,
+                    'width': moveWidth
+                });
+
+            });//menu-02 end
+
+            //script에서 넓이값 구하는 방법
+            //width() 
+            //innerWidth()
+            //outerWidth()
+            //outerWidth(ture)
+        });//script end
+    </script>
+</head>
+
+<body>
+    <div class="menu-01">
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+
+        <div class="menu_bar">
+            <span>메뉴 바</span>
+        </div><!-- .menu_bar end -->
+    </div><!-- .menu-01 end -->
+
+    <div class="menu-02">
+        <ul>
+            <li>뉴스스탠드</li>
+            <li>언론사편집</li>
+            <li>엔터</li>
+            <li>스포츠</li>
+            <li>경제</li>
+        </ul>
+
+        <div class="menu_bar">
+            <span>메뉴 바</span>
+        </div><!-- .menu_bar end -->
+    </div><!-- .menu-02 end -->
+</body>
+
+</html>

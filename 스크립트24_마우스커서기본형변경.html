@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 커서 기본형 변경</title>
+    <link rel="stylesheet" href="css/스크립트24.css">
+    <script src="lib/jquery-3.7.1.min.js"></script> 
+    <script>
+        $(function(){
+            //1. 마우스 커서 위치 적용
+            $(window).on('mousemove', function(e){
+                let mouseX = e.pageX;
+                let mouseY = e.pageY;
+
+                $('.cursor').css({
+                    'left' : mouseX,
+                    'top' : mouseY
+                });
+            });
+
+            //2. 
+            // .item에게 마우스 올렸을 때 .cursour에게 클래스명 scale 추가
+            //css파일(스크립트24.css)에서 .cursour.scale 가로크기와 세로크기 변화
+            $('.item').on('mouseenter', function(){
+                $('.cursor').addClass('scale');
+            });
+            $('.item').on('mouseleave', function(){
+                $('.cursor').removeClass('scale');
+            });
+
+        });//script end
+    </script>
+
+</head>
+<body>
+    <div class="cursor"></div>
+    <div id="wrap">
+        <header class="header">헤더</header>
+        <main class="main">
+            <div class="item">
+                <a href="#">
+                    <img src="img/image-2.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </a>
+            </div><!-- item -->
+        </main><!-- .main end -->
+    </div><!-- #wrap end -->
+</body>
+</html>

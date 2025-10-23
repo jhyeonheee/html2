@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.menu-01 {
+    margin: 100px;
+    position: relative;
+}
+.menu-01 ul {
+    height: 50px;
+    display: flex;
+}
+.menu-01 ul li {
+    border: 1px solid #333;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menu-01 .menu_bar {
+    width: 100px;
+    height: 3px;
+    background-color: darkorange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.menu-01 .menu_bar span {
+    position: absolute;
+    left: -99999999999px;
+}
+/* .menu-01 end */
+
+.menu-02 {
+    margin: 100px;
+    position: relative;
+}
+.menu-02 ul {
+    display: flex;
+}
+.menu-02 ul li {
+    border: 1px solid #333;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+}
+.menu-02 .menu_bar {
+    width: 100px;
+    height: 5px;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.menu-02 .menu_bar span {
+    position: absolute;
+    left: -9999999px;
+    
+}
