@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트27_반복실행</title>
+    <link rel="stylesheet" href="css/스크립트27.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function(){
+            //일정시간동안 반복적으로 실행
+            //setInterval()
+            /* setInterval(function(){
+                //실행 될 스크립트 코드
+            },시간); */
+
+            //.top_banner ul li에게 순차적으로 
+            //클래스명 on 추가
+
+            //eq(index) =>jquery에서 요소의 순서 지정
+            //예시 : $('.top_banner ul li').eq(2).addClass('on')
+            
+            let i = 0; 
+            let topBanner = $('.top_banner ul li');
+            setInterval(function(){
+                i++;
+                /* console.log(i)//2초마다 1씩 증가하면 ㅇㅋ */
+                
+                if(i >= topBanner.length) {
+                    i = 0;
+                }
+
+                topBanner.removeClass('on');//class명 지우고 순차적으로 하나씩 노출
+                topBanner.eq(i).addClass('on');//eq넣으면 하나씩 노출됨
+            }, 2000);
+        });//script end
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="top_banner">
+            <ul>
+                <li class="on">첫 가입 선물!</li>
+                <li>주문 마감: 오전 7시 이후 확인</li>
+                <li>YOUR FIRST BRBR</li>
+            </ul>
+        </div><!-- .top_banner end -->
+
+        <header class="header">헤더</header>
+        <main class="main">메인콘텐츠</main>
+        <footer class="footer">푸터</footer>
+
+    </div><!-- #wrap end -->
+</body>
+</html>

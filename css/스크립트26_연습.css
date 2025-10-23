@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.loading {
+    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+.loading div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.loading div img {
+    width: 500px;
+    height: 100%;
+}
+
+.loading.active div {
+    opacity: 1;
+    transition: opacity 0.5s 1s;
+}
+
+#wrap{
+    background-color: aqua;
+}
+

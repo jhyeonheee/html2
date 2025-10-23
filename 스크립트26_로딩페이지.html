@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/스크립트26.css">
+    <title>스크립트26_로딩페이지</title>
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //loading에게 .active 추가
+            //.active가 붙었을 때 실행
+
+            $('.loading').addClass('active');
+
+            //일정시간 뒤에 실행
+            //setTimeout()
+            /* setTimeout(function(){
+                //시간 뒤에 실행될 코드
+            }, 시간) */
+            setTimeout(function(){
+                $('.loading').slideUp();
+            },5000 );//5s 뒤에 슬라이드 올라감
+
+        });//script end
+        
+    </script>
+</head>
+<body>
+    <div class="loading">
+        <div>
+            <span>💫</span>
+            <span>로</span>
+            <span>딩</span>
+            <span>중</span>
+            <span>💫</span>
+        </div>
+    </div><!-- .loading end -->
+
+    <div id="wrap">
+        <header class="header">헤더</header>
+        <main class="main">메인콘텐츠</main>
+        <footer class="footer">푸터</footer>
+    </div><!-- #wrap end -->
+</body>
+</html>

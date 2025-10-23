@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트26_연습</title>
+    <link rel="stylesheet" href="css/스크립트26_연습.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.loading').addClass('active');
+
+            setTimeout(function () {
+                $('.loading').slideUp();
+            }, 3000);
+        });//script end
+    </script>
+</head>
+
+<body>
+    <div class="loading">
+        <div>
+            <img src="img/running.gif" alt="running horse">
+        </div>
+    </div><!-- .loading end -->
+
+    <div id="wrap">
+        <span>2페이지</span>
+    </div><!-- #wrap end -->
+</body>
+
+</html>
