@@ -37,7 +37,8 @@
             let menuWidth = $('.menu-02 ul li:first').outerWidth()
             $('.menu-02 .menu_bar').width(menuWidth);//직접적으로 값 적용하기(맨처음 li width값과 라인이 알맞지 않음 해결)
                                                      //이벤트 실행 전 적용되어있어야 함
-            $('.menu-02 ul li').on('mouseenter', function () {
+                                                     //모바일 화면을 고려해 touchstart 추가
+            $('.menu-02 ul li').on('mouseenter touchstart', function () {
                 //console.log($(this).position().left)
                 //console.log($(this).outerWidth())
                 let moveMove = $(this).position().left;

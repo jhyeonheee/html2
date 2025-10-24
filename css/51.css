@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import url('reset.css');
+
+html,
+body {
+    /* font-size: 10px; px 단위로 고정 시 폰트 크기 변화 ㄴㄴ */
+    font-size: 62.4%;
+    /* 사용자의 접근성을 위한 설정(화면 확대/축소 시 폰트 크기변화 */
+}
+
+/* .text {
+    width: 400px;
+    font-size: 30px;
+    padding: 20px;
+} */
+
+.text {
+    width: 40rem;
+    font-size: 3rem;
+    padding: 2rem;
+    background-color: aquamarine;
+}
+
+.title {}
+
+.title h2 {
+    font-size: 6rem;
+    margin-bottom: 1.2rem;
+}
+
+.title p {
+    font-size: 2rem;
+}
+
+@media screen and (max-width:960px) {
+
+    html,
+    body {
+        font-size: 37.5%;
+    }
+
+  /*   .title h2 {
+        font-size: 6rem;
+        margin-bottom: 2rem;
+    }
+
+    .title p {
+        font-size: 2.3rem;
+    } */
+
+}
+
+@media screen and (max-width:480px) {
+       html,
+    body {
+        font-size: 37.5%;
+    }
+
+  /*   .title h2 {
+        font-size: 6rem;
+        margin-bottom: 2rem;
+    } */
+
+    .title p {
+        /* font-size: 14px; */
+        font-size: 2.33rem;
+        /* 14 / 6 => 2.33 */
+    }
+
+}
